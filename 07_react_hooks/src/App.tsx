@@ -1,8 +1,10 @@
-import ToggleTheme from './components/ToggleTheme';
+import CustomToggleTheme from './components/CustomToggleTheme';
+
 const App = () => {
   return (
     <div>
-      <ToggleTheme />
+      {/* <ToggleTheme /> */}
+      <CustomToggleTheme />
     </div>
   );
 };
