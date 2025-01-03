@@ -1,9 +1,12 @@
 import { useState } from 'react';
 
 const ToggleTheme = () => {
-  const [theme, setTheme] = useState('light');
+  const initialTheme = window.localStorage.getItem('theme');
+  const [theme, setTheme] = useState(initialTheme || 'light');
+
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
+    window.localStorage.setItem('theme', theme === 'light' ? 'dark' : 'light');
   };
   const capTheme = theme.charAt(0).toUpperCase() + theme.slice(1);
 
