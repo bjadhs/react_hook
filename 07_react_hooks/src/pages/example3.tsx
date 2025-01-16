@@ -1,7 +1,9 @@
 import useLocal from '../hooks/useLocal';
+import useUpdateHook from '../hooks/useUpdateHook';
 
 const Example3 = () => {
   const [name, setName] = useLocal('name', 'bijaya');
+  useUpdateHook(name);
 
   return (
     <div>
